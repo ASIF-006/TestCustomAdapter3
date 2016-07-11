@@ -4,19 +4,32 @@ package com.example.alasif.myapplication;
 import java.util.ArrayList;
 
 public class Team {
-    private String teamName;
+    private String teamNameText;
+    private String teamPhoneText;
+    private  String teamEmailText;
     private int teamImageId;
 
-    public Team(String teamName, int teamImageId) {
-        this.teamName = teamName;
+    public String getTeamPhoneText() {
+        return teamPhoneText;
+    }
+
+    public String getTeamEmailText() {
+        return teamEmailText;
+    }
+
+    public Team(String teamName, int teamImageId, String teamEmail, String teamPhone) {
+        this.teamNameText = teamName;
         this.teamImageId = teamImageId;
+        this.teamEmailText = teamEmail;
+        this.teamPhoneText = teamPhone;
+
     }
 
     public Team() {
     }
 
-    public String getTeamName() {
-        return teamName;
+    public String getTeamNameText() {
+        return teamNameText;
     }
 
     public int getTeamImageId() {
@@ -25,9 +38,9 @@ public class Team {
 
    public ArrayList<Team> getAllTeam(){
        ArrayList<Team> teams = new ArrayList<>();
-       teams.add(new Team("angry birds",R.drawable.ang));
-       teams.add(new Team("minions",R.drawable.mini));
-       teams.add(new Team("pikachu",R.drawable.pikachu));
+       teams.add(new Team("AngryBird",R.drawable.ang,"angry@gmail.com","01911907777"));
+       teams.add(new Team("Minions",R.drawable.mini,"min@hotmail","01711809999"));
+       teams.add(new Team("Pikachu",R.drawable.pikachu,"pika@yahoo.com","01180902354"));
        return  teams;
    }
 
